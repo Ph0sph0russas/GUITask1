@@ -6,7 +6,9 @@ namespace WinFormsApp1
         {
             InitializeComponent();
 
-
+            initialSumLabel.Text = Properties.Settings.Default.initialSum.ToString();
+            maxIncreaseLabel.Text = Properties.Settings.Default.maxIncrease.ToString();
+            maxDepositLabel.Text = Properties.Settings.Default.maxDeposit.ToString();
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -45,8 +47,16 @@ namespace WinFormsApp1
 
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
+            Properties.Settings.Default.initialSum = initialSumLabel.Text;
+            Properties.Settings.Default.maxIncrease = maxIncreaseLabel.Text;
+            Properties.Settings.Default.maxDeposit = maxDepositLabel.Text;
+            Properties.Settings.Default.Save();
+            this.Close();
+        }
 
-            Close();
+        private void Form1_FormClosed(object sender, FormClosedEventArgs e)
+        {
+
         }
     }
 
