@@ -5,6 +5,8 @@ namespace WinFormsApp1
         public Form1()
         {
             InitializeComponent();
+
+
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -19,13 +21,32 @@ namespace WinFormsApp1
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var initialSum = double.Parse(this.initialSumLabel.Text);
-            var maxIncrease = double.Parse(this.maxIncreaseLabel.Text);
-            var maxDeposit = double.Parse(this.maxDepositLabel.Text);
+            double initialSum, maxIncrease, maxDeposit;
+            try
+            {
+                initialSum = double.Parse(this.initialSumLabel.Text);
+                maxIncrease = double.Parse(this.maxIncreaseLabel.Text);
+                maxDeposit = double.Parse(this.maxDepositLabel.Text);
+            }
+            catch (FormatException)
+            {
+                return;
+            }
 
             var messageAnswers = Logic.calculateDepositInfo(initialSum, maxIncrease, maxDeposit);
 
             MessageBox.Show(messageAnswers);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+
+            Close();
         }
     }
 
