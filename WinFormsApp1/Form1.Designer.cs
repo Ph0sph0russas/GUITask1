@@ -28,37 +28,37 @@
         /// </summary>
         private void InitializeComponent()
         {
-            initialSum = new TextBox();
-            maxIncrease = new TextBox();
-            maxDeposit = new TextBox();
+            initialSumLabel = new TextBox();
+            maxIncreaseLabel = new TextBox();
+            maxDepositLabel = new TextBox();
             button1 = new Button();
             SuspendLayout();
             // 
-            // initialSum
+            // initialSumLabel
             // 
-            initialSum.Location = new Point(77, 46);
-            initialSum.Name = "initialSum";
-            initialSum.Size = new Size(200, 23);
-            initialSum.TabIndex = 0;
-            initialSum.Text = "Первоначальный взнос";
-            initialSum.TextChanged += textBox1_TextChanged;
+            initialSumLabel.Location = new Point(77, 46);
+            initialSumLabel.Name = "initialSumLabel";
+            initialSumLabel.Size = new Size(200, 23);
+            initialSumLabel.TabIndex = 0;
+            initialSumLabel.Text = "Первоначальный взнос";
+            initialSumLabel.TextChanged += textBox1_TextChanged;
             // 
-            // maxIncrease
+            // maxIncreaseLabel
             // 
-            maxIncrease.Location = new Point(77, 75);
-            maxIncrease.Name = "maxIncrease";
-            maxIncrease.Size = new Size(200, 23);
-            maxIncrease.TabIndex = 1;
-            maxIncrease.Text = "Максимальное увеличение вклада";
+            maxIncreaseLabel.Location = new Point(77, 75);
+            maxIncreaseLabel.Name = "maxIncreaseLabel";
+            maxIncreaseLabel.Size = new Size(200, 23);
+            maxIncreaseLabel.TabIndex = 1;
+            maxIncreaseLabel.Text = "Максимальное увеличение вклада";
             // 
-            // maxDeposit
+            // maxDepositLabel
             // 
-            maxDeposit.Location = new Point(77, 105);
-            maxDeposit.Name = "maxDeposit";
-            maxDeposit.Size = new Size(200, 23);
-            maxDeposit.TabIndex = 2;
-            maxDeposit.Text = "Максимальный размер вклада";
-            maxDeposit.TextChanged += textBox3_TextChanged;
+            maxDepositLabel.Location = new Point(77, 105);
+            maxDepositLabel.Name = "maxDepositLabel";
+            maxDepositLabel.Size = new Size(200, 23);
+            maxDepositLabel.TabIndex = 2;
+            maxDepositLabel.Text = "Максимальный размер вклада";
+            maxDepositLabel.TextChanged += textBox3_TextChanged;
             // 
             // button1
             // 
@@ -76,9 +76,9 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
-            Controls.Add(maxDeposit);
-            Controls.Add(maxIncrease);
-            Controls.Add(initialSum);
+            Controls.Add(maxDepositLabel);
+            Controls.Add(maxIncreaseLabel);
+            Controls.Add(initialSumLabel);
             Name = "Form1";
             Text = "Form1";
             ResumeLayout(false);
@@ -87,9 +87,9 @@
 
         #endregion
 
-        private TextBox initialSum;
-        private TextBox maxIncrease;
-        private TextBox maxDeposit;
+        private TextBox initialSumLabel;
+        private TextBox maxIncreaseLabel;
+        private TextBox maxDepositLabel;
         private Button button1;
     }
 }
