@@ -36,16 +36,15 @@
             // 
             // initialSumLabel
             // 
-            initialSumLabel.Location = new Point(77, 46);
+            initialSumLabel.Location = new Point(109, 47);
             initialSumLabel.Name = "initialSumLabel";
             initialSumLabel.Size = new Size(200, 23);
             initialSumLabel.TabIndex = 0;
             initialSumLabel.Text = "Первоначальный взнос";
-            initialSumLabel.TextChanged += textBox1_TextChanged;
             // 
             // maxIncreaseLabel
             // 
-            maxIncreaseLabel.Location = new Point(77, 75);
+            maxIncreaseLabel.Location = new Point(109, 76);
             maxIncreaseLabel.Name = "maxIncreaseLabel";
             maxIncreaseLabel.Size = new Size(200, 23);
             maxIncreaseLabel.TabIndex = 1;
@@ -53,16 +52,15 @@
             // 
             // maxDepositLabel
             // 
-            maxDepositLabel.Location = new Point(77, 105);
+            maxDepositLabel.Location = new Point(109, 105);
             maxDepositLabel.Name = "maxDepositLabel";
             maxDepositLabel.Size = new Size(200, 23);
             maxDepositLabel.TabIndex = 2;
             maxDepositLabel.Text = "Максимальный размер вклада";
-            maxDepositLabel.TextChanged += textBox3_TextChanged;
             // 
             // button1
             // 
-            button1.Location = new Point(77, 134);
+            button1.Location = new Point(109, 134);
             button1.Name = "button1";
             button1.Size = new Size(200, 43);
             button1.TabIndex = 3;
@@ -82,7 +80,6 @@
             Name = "Form1";
             Text = "Form1";
             FormClosing += Form1_FormClosing;
-            Load += Form1_Load;
             ResumeLayout(false);
             PerformLayout();
         }
